@@ -1,0 +1,213 @@
+/* ==========================================================================
+   TechWeek Valero 2026 - Estilos principales
+   ========================================================================== */
+
+   :root {
+    --primary: #6366f1;           /* índigo moderno */
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --dark: #0f172a;
+    --dark-800: #1e293b;
+    --gray: #64748b;
+    --light: #f8fafc;
+    --accent: #ec4899;             /* magenta para toques */
+    --radius: 0.75rem;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Reset y base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: var(--light);
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--dark) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: background-color 0.4s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(15, 23, 42, 0.92) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    transition: all 0.25s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-light) !important;
+    transform: translateY(-1px);
+  }
+  
+  /* Hero */
+  #hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.85)),
+                url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  #hero h1 {
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, #fff, var(--primary-light), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.2rem;
+  }
+  
+  #hero .lead {
+    font-size: 1.4rem;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+  }
+  
+  /* Secciones */
+  section {
+    padding: 7rem 0;
+  }
+  
+  h2 {
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  h2:after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background: var(--primary);
+    bottom: -10px;
+    left: 0;
+    border-radius: 4px;
+  }
+  
+  /* Cards */
+  .card {
+    border: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.35s ease;
+    background: white;
+  }
+  
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+  }
+  
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.08);
+  }
+  
+  .card-body {
+    padding: 1.6rem;
+  }
+  
+  /* Accordion */
+  .accordion-button {
+    font-weight: 600;
+    background-color: #f1f5f9;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--dark-800);
+    border-top: 4px solid var(--primary);
+  }
+  
+  footer a {
+    color: var(--primary-light);
+    transition: color 0.25s;
+  }
+  
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* Scroll suave + helper */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 992px) {
+    #hero {
+      min-height: 70vh;
+    }
+    section {
+      padding: 5rem 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #hero h1 {
+      font-size: 2.8rem;
+    }
+    .btn-lg {
+      padding: 0.7rem 1.6rem;
+    }
+  }
