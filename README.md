@@ -8,21 +8,8 @@ Codigo HTML de la pagina en "Estructura inicial
 
 
 
+<img width="615" height="317" alt="image" src="https://github.com/user-attachments/assets/68c2d44e-2ccb-47ec-9d75-d5b88cceba9f" />
 
-Secciones y Columnas Bootstrap
-xml
-<!-- Sección #about: 2 columnas responsive -->
-<div class="row align-items-center g-5">
-    <div class="col-lg-6">Texto</div>        <!-- 6/12 en lg -->
-    <div class="col-lg-6">Imagen</div>      <!-- 6/12 en lg -->
-</div>
-
-<!-- Sección #talleres: 3 columnas responsive -->
-<div class="row g-4">
-    <div class="col-md-6 col-lg-4">Card 1</div>  <!-- 4/12 lg, 6/12 md -->
-    <div class="col-md-6 col-lg-4">Card 2</div>  <!-- 4/12 lg, 6/12 md -->
-    <div class="col-md-6 col-lg-4">Card 3</div>  <!-- 4/12 lg, 6/12 md -->
-</div>
 Explicación del grid: Sistema perfecto de 12 columnas. #about usa split 6+6 (equilibrado texto/imagen). #talleres responsive: 3 columnas en lg (4+4+4=12), 2 en md (6+6).
 
 Componentes Prediseñados Bootstrap Usados
