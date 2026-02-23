@@ -66,3 +66,10 @@ body d-flex flex-column h-100, main flex-grow-1, footer mt-auto.
 Mejora: Variables CSS --primary, Inter font, transiciones suaves.
 
 Explicación de commits: Progresión lógica: estructura → hero → contenido → interactividad → polish responsive/accesible. Mejoras siguen mobile-first (breakpoints lg/md), semántica HTML5 (<main>, <article>), accesibilidad (ARIA, alt texts descriptivos). Total: landing page production-ready, compatible navegadores modernos.
+
+
+
+
+Mayor dificulatad encontrada:
+
+Me resulto dificil configurar en general GitHub, cosas como las ramas y la creación de los directorios se me complico.
