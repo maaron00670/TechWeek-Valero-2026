@@ -6,7 +6,10 @@ Codigo HTML de la pagina en "Estructura inicial
 
 
 
-
+# Secciones usadas con su número de columnas de Bootstrap usadas,
+# componentes prediseñados de Bootstrap usados,
+# Descripción de los diferentes commits y mejoras implementadas de cada
+# uno de ellos
 
 <img width="615" height="317" alt="image" src="https://github.com/user-attachments/assets/68c2d44e-2ccb-47ec-9d75-d5b88cceba9f" />
 
@@ -70,6 +73,6 @@ Explicación de commits: Progresión lógica: estructura → hero → contenido 
 
 
 
-Mayor dificulatad encontrada:
+# Mayor dificulatad encontrada
 
 Me resulto dificil configurar en general GitHub, cosas como las ramas y la creación de los directorios se me complico.
