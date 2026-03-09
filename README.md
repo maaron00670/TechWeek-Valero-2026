@@ -4,72 +4,47 @@
 Codigo HTML de la pagina en "Estructura inicial
 
 
+## 🛠️ Tecnologías y Sistema de Rejilla (Grid)
 
+El proyecto está maquetado principalmente con **Bootstrap 5.3** y CSS personalizado para adaptar los colores corporativos (azul San Valero) y la tipografía (Google Fonts: *Inter*). 
 
-# Secciones usadas con su número de columnas de Bootstrap usadas, componentes prediseñados de Bootstrap usados, descripción de los diferentes commits y mejoras implementadas de cada uno de ellos
+Para estructurar el contenido, he utilizado el sistema de columnas de Bootstrap en las siguientes secciones:
 
-<img width="615" height="317" alt="image" src="https://github.com/user-attachments/assets/68c2d44e-2ccb-47ec-9d75-d5b88cceba9f" />
+* **Sección "Sobre el evento" (`#about`):** * Utiliza una fila (`.row`) dividida en dos bloques simétricos en pantallas grandes mediante la clase **`col-lg-6`**. Una columna contiene el texto explicativo y la otra la imagen representativa.
+* **Sección "Talleres Destacados" (`#talleres`):** * Utiliza una cuadrícula que se adapta al dispositivo. He usado **`col-md-6 col-lg-4`** para cada tarjeta. Esto hace que en móviles se vea una columna (100%), en tablets se divida en dos columnas (50%), y en escritorio se muestren tres columnas perfectas (33.3%).
 
-Explicación del grid: Sistema perfecto de 12 columnas. #about usa split 6+6 (equilibrado texto/imagen). #talleres responsive: 3 columnas en lg (4+4+4=12), 2 en md (6+6).
+---
 
-Componentes Prediseñados Bootstrap Usados
-Navbar (navbar navbar-expand-lg navbar-dark fixed-top): Responsive, collapsible con toggler ARIA-accessible.
-​
+## 🧩 Componentes de Bootstrap Utilizados
 
-Cards (3x card h-100): Hover effects custom, card-img-top, card-body, card-title semánticos.
+Para acelerar el desarrollo y mantener una interfaz coherente, he integrado los siguientes componentes prediseñados de Bootstrap:
 
-Hero section: container py-5, display-3, lead, btn btn-primary btn-lg para CTA prominente.
+* **Navbar (`.navbar`):** Barra de navegación fijada en la parte superior (`fixed-top`) con menú hamburguesa que colapsa en dispositivos móviles (`navbar-toggler`).
+* **Cards (`.card`):** Utilizadas en la sección de talleres para encapsular la imagen (`card-img-top`), el título (`card-title`) y la descripción del taller de forma visualmente limpia.
+* **Accordion (`.accordion-flush`):** Implementado en la sección de ponentes (`#ponentes`) para ahorrar espacio en pantalla. Permite desplegar y ocultar la información de cada experto al hacer clic.
+* **Buttons (`.btn .btn-primary`):** Botón de llamada a la acción (CTA) en la sección principal (*Hero*) para invitar al usuario a descubrir más sobre el evento.
 
-Accordion (accordion accordion-flush): 2 items con collapse, accordion-button, accesible con aria-expanded.
+---
 
-Utilities: row g-4/5, col-*-*, container, text-center, img-fluid, shadow, h-100, flex-grow-1, mt-auto para layout sticky footer.
+## 📝 Historial de Commits y Mejoras Implementadas
 
-Explicación: Todos componentes nativos Bootstrap 5.3 (sin frameworks extra). Navbar fija (fixed-top), cards hover customizan shadows/transforms manteniendo responsive/mobile-first. Accordion ideal para ponentes (espacio eficiente).
+A continuación, se detalla la evolución del proyecto a través de sus *commits* principales:
 
-Evolución de Commits y Mejoras Implementadas
-Basado en estructura profesional iterativa (típica desarrollo landing page):
-
-feat: base structure + navbar
-
-<header> con navbar fixed-top responsive (container, toggler ARIA).
-
-Mejora: navbar-dark, scroll suave implícito via href="#id".
-
-feat: hero section responsive
-
-<section id="hero"> con gradient overlay, display-3 lead.
-
-Mejora: min-height:70vh flex center, mobile @media max-767px 60vh.
-
-feat: about section 2-col grid
-
-row align-items-center: texto+imagen equilibrados.
-
-Mejora: g-5 spacing, img-fluid rounded-3 shadow accesible (alt semántico).
-
-feat: talleres cards responsive
-
-3 cards en row g-4 col-md-6 col-lg-4 (12 columnas perfectas).
-
-Mejora: h-100 igual altura, hover translateY(-8px), <article> semántico.
-
-feat: ponentes accordion
-
-accordion-flush shadow-sm con 2 paneles colapsables.
-
-Mejora: data-bs-parent evita múltiples abiertos, WCAG aria-controls.
-
-feat: sticky footer + polish
-
-body d-flex flex-column h-100, main flex-grow-1, footer mt-auto.
-
-Mejora: Variables CSS --primary, Inter font, transiciones suaves.
-
-Explicación de commits: Progresión lógica: estructura → hero → contenido → interactividad → polish responsive/accesible. Mejoras siguen mobile-first (breakpoints lg/md), semántica HTML5 (<main>, <article>), accesibilidad (ARIA, alt texts descriptivos). Total: landing page production-ready, compatible navegadores modernos.
+1.  **`init: estructura básica y configuración del entorno`**
+    * *Mejora:* Creación del archivo `index.html`, configuración del `<head>` (metadatos, título) y enlace a las librerías externas (Bootstrap por CDN y tipografía Inter de Google Fonts).
+2.  **`feat: añade cabecera Navbar y Hero section`**
+    * *Mejora:* Implementación del menú de navegación *responsive* y maquetación de la primera vista (Hero) con imagen de fondo oscurecida, titular principal y botón de anclaje.
+3.  **`feat: implementa grid de Bootstrap para sección About y Talleres`**
+    * *Mejora:* Construcción de la estructura de filas y columnas. Inserción del componente *Card* para los tres talleres principales, asegurando que se adapten correctamente a diferentes tamaños de pantalla.
+4.  **`feat: integra Acordeón para ponentes y Footer`**
+    * *Mejora:* Añadida la lista de ponentes usando paneles colapsables (*Accordion*) para mejorar la experiencia de usuario. Creación del pie de página con información de copyright y contacto.
+5.  **`style: personalización CSS, colores corporativos y animaciones`**
+    * *Mejora:* Sobrescritura de estilos de Bootstrap mediante CSS puro (variables `:root`). Añadidos efectos de transición suaves (*hover*) en los enlaces, botones y una animación de elevación en las tarjetas de los talleres.
 
 
 
 
 # Mayor dificulatad encontrada
 
-Me resulto dificil configurar en general GitHub, cosas como las ramas y la creación de los directorios se me complico.
+Me resultó complejo configurar GitHub en general. Aspectos como la gestión de ramas y la creación de directorios me presentaron ciertas dificultades.
+Además, tuve algunos inconvenientes al intentar descargar GitHub Desktop, ya que en un primer intento instalé el programa equivocado.
