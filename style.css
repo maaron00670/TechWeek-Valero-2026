@@ -157,7 +157,7 @@
     padding: 1.6rem;
   }
   
-  /* Accordion */
+  /* Acordeon */
   .accordion-button {
     font-weight: 600;
     background-color: #f1f5f9;
@@ -188,12 +188,12 @@
     text-decoration: underline;
   }
   
-  /* Scroll suave + helper */
+  /* Para un efecto de scroll suave */
   html {
     scroll-behavior: smooth;
   }
   
-  /* Responsive tweaks */
+  /* Mejoras */
   @media (max-width: 992px) {
     #hero {
       min-height: 70vh;
@@ -210,4 +210,5 @@
     .btn-lg {
       padding: 0.7rem 1.6rem;
     }
+
   }
